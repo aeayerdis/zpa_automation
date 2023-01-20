@@ -5,13 +5,13 @@ import zpa_functions
 segment_id = zpa_functions.get_segment_id_by_name("Existing Segment Group")
 
 # Regional Server Groups for passing traffic to App Segments
-# names used "NA App Connectors", "EU App Connectors", "APAC App Connectors", "All App Connectors"
-group_id = zpa_functions.server_group_id("EU App Connectors")
+# names used "X App Connectors", "Y App Connectors", "Z App Connectors", "W App Connectors"
+group_id = zpa_functions.server_group_id("Y App Connectors")
 
 # Creates your App Segments
 # Update The Server_Group_IDs to respective regional group
 new_app = zpa_functions.zpa.app_segments.add_segment(
-    name="EU - App Segment",
+    name="Y - App Segment",
     description="Description",
     domain_names=[
         "test.co.uk",
